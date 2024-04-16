@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: "Tinos", serif;
+  background-color: transparent;
+  font-weight: 400;
+  overflow: hidden;
+}
+.hidden {
+  display: none;
+}
+.menu {
+    position: absolute;
+    top: 55px;
+    /* right: 10px; */
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+}
+.ekran3, .ekran4, .ekran5{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ekran3>button, .ekran4>button, .ekran5>button{
+  width: 100px;
+  height: 50px;
+  background-color: #00e317;
+}
+.ekran3{
+  background-color: #001438;
+  font-size: 30px;
+}
+.ekran4{
+  background-color: #070d18;
+  font-size: 30px;
+}
+.ekran5{
+  background-color: #0059ff;
+  font-size: 30px;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding: 20px;
+    background-color: rgb(204, 255, 0);
+    border-radius: 50%;
+    /* margin-right: 10px; */
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 30px;
+}
+
+.menu ul li.active {
+    background-color: rgb(168, 41, 41);
+    color: rgb(0, 0, 0);
+}
+.menu li.disabled {
+    opacity: 0.5; /* Пример настройки прозрачности */
+    pointer-events: none; /* Делаем элемент неактивным для событий мыши */
+}
+.visible{
+  display: block;
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+.ekran{
+  max-width: 1440px;
+  height: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.ekran1{
+  
+  flex-direction: column;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.ekran>img{
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  height: 1000px;
+}
+.headings{
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  padding-top: 144px;
+}
+.headings>h1{
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  text-align: right;
+  padding: 10px;
+  background-image: url(img/headings\ background.png);
+}
+.first_heading{
+  font-size: 20px;
+  
+}
+.second_heading{
+  font-size: 20px;
+
+}
+
+.headings>h1:nth-child(2){
+  margin-top: 2vh;
+}
+
+.button-grid {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 40%;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 500px;
+  height: fit-content;
+  top: -100px;
+  }
+.button-column{
+  display: flex;
+}
+.button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+}
+.modal{
+    top: 0;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+    width: 100%;
+  }
+  .modal>img{
+    height: 1000px;
+    margin: auto;
+    /* position: absolute; */
+}
+.modal-container{
+    width: 100%;
+    /* height: 50%; */
+    position: absolute;
+    top: 0;
+    margin-top: 170px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    max-width: 690px;
+}
+.first-column{
+    width: 40%;
+    /* background-color: #4CAF50; */
+    max-height: 550px;
+    min-height: 435px;
+    text-align: right;
+    margin-left: 5%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 25px;
+  }
+  .second-column{
+    width: 40%;
+    /* background-color: #4CAF50; */
+    max-height: 550px;
+    min-height: 435px;
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 3%;
+    font-size: 21px;
+  }
+  .back{
+    display: block;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+@media (max-width: 1024px) {
+  .menu>ul>li{
+    margin: 0 15px;
+  }
+  .ekran{
+    height: 900px;
+  }
+  .ekran1{
+    justify-content: space-evenly;
+
+  }
+  .ekran>img{
+    height: 900px;
+  }
+  .headings{
+    width: 57%;
+    padding-top: 70px;
+  }
+  .headings>h1{
+    padding: 5px;
+  }
+  .first_heading{
+    font-size: 18px;
+    
+  }
+  .second_heading{
+    font-size: 18px;
+  
+  }
+  div.button-grid{
+    width: 57%;
+    top: 0;
+  }
+  .modal>img{
+    height: 900px;
+  }
+  .modal-container{
+    margin-top: 130px;
+  }
+  .first-column{
+    width: 35%;
+    font-size: 20px;
+    margin-left: 10%;
+    height: 100%;
+    max-height: 450px;
+    min-height: 400px;
+  }
+  .second-column{
+    width: 35%;
+    font-size: 20px;
+    margin-right: 10%;
+    max-height: 450px;
+    min-height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .menu{
+    top: 75px;
+    width: 55%;
+  }
+  .menu>ul>li{
+    padding: 18px;
+    margin: 10px;
+  }
+  .ekran>img{
+    height: 900px;
+  }
+  .headings{
+    width: 55%;
+  }
+  .first_heading{
+    font-size: 16px;
+    
+  }
+  .second_heading{
+    font-size: 16px;
+  
+  }
+  div.button-grid{
+    width: 60%;
+  }
+  .modal>img{
+    height: 900px;
+  }
+  .modal-container{
+    margin-top: 170px;
+  }
+  .first-column{
+    width: 30%;
+    margin-left: 15%;
+    font-size: 16px;
+  }
+  .second-column{
+    width: 30%;
+    margin-right: 15%;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px){
+  .menu>ul>li{
+    padding: 14px;
+    margin: 5px;
+  }
+  .ekran>img{
+    height: 800px;
+  }
+  div.button-grid{
+    width: 77%;
+    top: -40px;
+  }
+  .modal-container{
+    margin-top: 130px;
+  }
+  .modal>img{
+    height: 800px;
+  }
+  .headings{
+    width: 72%;
+  }
+  .first_heading{
+    font-size: 12px;
+    
+  }
+  .second_heading{
+    font-size: 12px;
+  
+  }
+  .first-column{
+    width: 30%;
+    font-size: 14px;
+    
+  }
+  .second-column{
+    width: 30%;
+    font-size: 13px;
+  }
+}
